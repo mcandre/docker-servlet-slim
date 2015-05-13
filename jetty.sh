@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 JETTY_HOME=/usr/share/jetty
 LOGDIR=/var/log/jetty

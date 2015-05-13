@@ -8,7 +8,7 @@ https://registry.hub.docker.com/u/mcandre/docker-servlet-slim/
 
 docker-servlet-slim is a container for hosting Java servlets, made smaller with a few techniques:
 
-* Replace [ubuntu](https://registry.hub.docker.com/_/ubuntu/) with [debian](https://registry.hub.docker.com/_/debian/).
+* Replace [ubuntu](https://registry.hub.docker.com/_/ubuntu/) with [alpine](https://registry.hub.docker.com/_/alpine/).
 * Replace [Tomcat](http://tomcat.apache.org/) with [Jetty](http://eclipse.org/jetty/).
 * Replace [Oracle JDK](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html) with [OpenJDK](http://openjdk.java.net/).
 * Drop [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) for [JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html).
@@ -18,26 +18,27 @@ docker-servlet-slim is a container for hosting Java servlets, made smaller with 
 
 ```
 $ make
+Successfully built 9e58b4f4b854
 docker run -d -p 8080:8080 mcandre/docker-servlet-slim
-acc7df450663b74c86d4572150201aa1d233a4e90a067579c1386737c2f8fa52
+b00d723845226f67f827956618cac21a33fdbe0f5f91b6ef2df8165a0cfc0a0d
 sleep 2
 time curl -s http://$(boot2docker ip):8080 | head
 <HTML>
   <HEAD>
-    <TITLE>Welcome to Jetty 6 on Debian</TITLE>
+    <TITLE>Powered By Jetty</TITLE>
     <META http-equiv="Pragma" content="no-cache">
     <META http-equiv="Cache-Control" content="no-cache,no-store">
   </HEAD>
 <BODY>
-<A HREF="http://jetty.mortbay.org"><IMG SRC="jetty_banner.gif"></A>
-<h1>Welcome to Jetty 6 on Debian</h1>
+<A HREF="http://www.eclipse.org/jetty"><IMG SRC="jetty_banner.gif"></A>
+<h1>Welcome to Jetty 7 - REMOTE ACCESS!!</h1>
+<p>
 
-
-real	0m0.210s
-user	0m0.039s
-sys	0m0.038s
+real	0m0.407s
+user	0m0.041s
+sys	0m0.045s
 docker images | grep mcandre/docker-servlet-slim | awk '{ print $(NF-1), $NF }'
-266.7 MB
+207 MB
 ```
 
 # REQUIREMENTS
