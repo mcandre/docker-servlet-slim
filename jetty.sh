@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -euo pipefail
 
 JETTY_HOME=/usr/share/jetty
 LOGDIR=/var/log/jetty
