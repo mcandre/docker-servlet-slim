@@ -50,3 +50,5 @@ docker images | grep mcandre/docker-servlet-slim | awk '{ print $(NF-1), $NF }'
 * [curl](http://curl.haxx.se/)
 * [make](http://www.gnu.org/software/make/)
 * [Node.js](https://nodejs.org/en/) (for dockerlint)
+* [editorconfig-cli](https://github.com/amyboyd/editorconfig-cli) (e.g. `go get github.com/amyboyd/editorconfig-cli`)
+* [flcl](https://github.com/mcandre/flcl) (e.g. `go get github.com/mcandre/flcl/...`)
