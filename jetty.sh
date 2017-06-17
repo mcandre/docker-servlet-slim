@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 set -euo pipefail
 
 JETTY_HOME=/usr/share/jetty
